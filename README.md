@@ -1,58 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+
+# 🤖 Laravel AI Resume Analyzer
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI-Powered-00C4CC?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-## About Laravel
+<p align="center">
+  An intelligent resume analysis web application powered by the official <strong>Laravel AI SDK</strong>.<br/>
+  Upload your PDF resume and get instant AI-driven feedback and improvement suggestions.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#-usage">Usage</a> •
+  <a href="#-screenshots">Screenshots</a> •
+  <a href="#-contributing">Contributing</a>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 📄 **PDF Resume Upload** — Upload any PDF resume directly from the browser
+- 🤖 **AI-Powered Analysis** — Get intelligent feedback using the Laravel AI SDK
+- 📊 **Detailed Insights** — Receive section-by-section breakdown and improvement tips
+- 🔐 **Secure Authentication** — User login & registration via Laravel Sanctum
+- ⚡ **Fast Processing** — PDF text extracted instantly using `smalot/pdfparser`
+- 📱 **Responsive UI** — Clean and modern interface built with Blade & Vite
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🛠 Tech Stack
 
-## Agentic Development
+| Layer | Technology |
+|---|---|
+| **Backend Framework** | Laravel 13 |
+| **Language** | PHP 8.3 |
+| **AI Integration** | Laravel AI SDK (`laravel/ai`) |
+| **PDF Parsing** | smalot/pdfparser |
+| **Authentication** | Laravel Sanctum |
+| **Frontend** | Blade Templates + Vite |
+| **Testing** | Pest PHP |
+| **Queue** | Laravel Queue (async processing) |
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- PHP >= 8.3
+- Composer
+- Node.js & NPM
+- MySQL or SQLite
+
+### Installation
+
+**1. Clone the repository**
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/rakibhossainporosh/Laravel-Ai-SDK-Resume-Analyzer.git
+cd Laravel-Ai-SDK-Resume-Analyzer
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+**2. Run the setup script**
 
-## Contributing
+```bash
+composer run setup
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This will automatically:
+- Install PHP & Node dependencies
+- Copy `.env.example` to `.env`
+- Generate application key
+- Run database migrations
+- Build frontend assets
 
-## Code of Conduct
+**3. Configure your `.env` file**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```env
+APP_NAME="Laravel AI Resume Analyzer"
+APP_URL=http://localhost:8000
 
-## Security Vulnerabilities
+DB_CONNECTION=sqlite
+# or use mysql:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_DATABASE=resume_analyzer
+# DB_USERNAME=root
+# DB_PASSWORD=
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Add your AI API key here
+ANTHROPIC_API_KEY=your_api_key_here
+```
 
-## License
+**4. Start the development server**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer run dev
+```
+
+> This starts the Laravel server, queue listener, logs watcher, and Vite dev server all at once.
+
+---
+
+## 📖 Usage
+
+1. **Register / Login** to your account
+2. **Upload** your PDF resume from the dashboard
+3. The system **parses** the PDF and extracts all text content
+4. **AI analyzes** the resume and generates detailed feedback
+5. **Review** suggestions to improve your resume
+
+---
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── Http/
+│   │   └── Controllers/     # Application controllers
+│   ├── Models/              # Eloquent models
+│   └── Services/            # AI & PDF service classes
+├── resources/
+│   └── views/               # Blade templates
+├── routes/
+│   └── web.php              # Web routes
+├── database/
+│   └── migrations/          # Database migrations
+└── tests/                   # Pest test suite
+```
+
+---
+
+## 🧪 Running Tests
+
+```bash
+composer run test
+```
+
+---
+
+## 👨‍💻 Author
+
+**Rakib Hossain**
+
+- GitHub: [@rakibhossainporosh](https://github.com/rakibhossainporosh)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <p>If you found this project helpful, please consider giving it a ⭐</p>
+</div>
