@@ -14,15 +14,6 @@
   Upload your PDF resume and get instant AI-driven feedback and improvement suggestions.
 </p>
 
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-screenshots">Screenshots</a> •
-  <a href="#-contributing">Contributing</a>
-</p>
-
 </div>
 
 ---
