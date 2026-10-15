@@ -101,7 +101,7 @@ ANTHROPIC_API_KEY=your_api_key_here
 composer run dev
 ```
 
-> This starts the Laravel server, queue listener, logs watcher, and Vite dev server all at once.
+> This starts the Laravel server, queue listener, logs watcher and Vite dev server all at once.
 
 ---
 
