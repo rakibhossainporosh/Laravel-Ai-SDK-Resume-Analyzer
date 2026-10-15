@@ -11,7 +11,7 @@
 
 <p align="center">
   An intelligent resume analysis web application powered by the official <strong>Laravel AI SDK</strong>.<br/>
-  Upload your PDF resume and get instant AI-driven feedback and improvement suggestions.
+  Upload your PDF resume and get instant AI driven feedback and improvement suggestions.
 </p>
 
 </div>
@@ -20,12 +20,12 @@
 
 ## ✨ Features
 
-- 📄 **PDF Resume Upload** — Upload any PDF resume directly from the browser
-- 🤖 **AI-Powered Analysis** — Get intelligent feedback using the Laravel AI SDK
-- 📊 **Detailed Insights** — Receive section-by-section breakdown and improvement tips
-- 🔐 **Secure Authentication** — User login & registration via Laravel Sanctum
-- ⚡ **Fast Processing** — PDF text extracted instantly using `smalot/pdfparser`
-- 📱 **Responsive UI** — Clean and modern interface built with Blade & Vite
+- 📄 **PDF Resume Upload** - Upload any PDF resume directly from the browser
+- 🤖 **AI-Powered Analysis** - Get intelligent feedback using the Laravel AI SDK
+- 📊 **Detailed Insights** - Receive section-by-section breakdown and improvement tips
+- 🔐 **Secure Authentication** - User login & registration via Laravel Sanctum
+- ⚡ **Fast Processing** - PDF text extracted instantly using `smalot/pdfparser`
+- 📱 **Responsive UI** - Clean and modern interface built with Blade & Vite
 
 ---
 
